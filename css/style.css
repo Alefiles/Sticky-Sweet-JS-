@@ -1,0 +1,15 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+header {
+  background-color: bisque; }
+  header img {
+    width: 8%; }
+
+main {
+  display: block;
+  background-color: #f5c4cb; }
+  main div .banner img {
+    width: 100%; }
