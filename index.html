@@ -6,66 +6,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stiky&Sweet - Galletas y Rolls </title>
     <meta name="description" content="Encontrá Galletas tradicionales, galletas gourmet y Rolls..si, de canela y más. Para mimarte y disfrutar sabores caseros al alcance de un click.">
-    <meta name="keywords" content="cookies, cookies gourmet, rolls de canela, rolls de manzana, repostería casera, merienda, desayuno">
+    <meta name="keywords" content="cookies, cookies gourmet, rolls de canela, rolls de manzana, budines, budín, carrot cacke, marmolado, repostería casera, merienda, desayuno">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <script src="main.js"></script>
+    <!--<script src="productos.js"></script>-->
+    
 
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-              <img class="navbar-brand"  src="imagenes/logoSS2.png" href="#" alt="logo">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Nosotros</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Nuestras Sabrosuras
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Cookies Clasicas</a></li>
-                      <li><a class="dropdown-item" href="#">Cookies Gourmet</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Rolls</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-        
+    <header id="contenedor_Nav">
+        <nav id="navbar">
+          <img id="navbar-brand"  src="imagenes/logoSS2.png" href="#" alt="logo">
+          <ul>
+            <li href="#">Inicio</li>
+            <li href="#">Nosotros</li>
+            <li href="#">Nuestras Sabrosuras</li>
+              <ul>
+                <li>Cookies</li>
+                <li>Rolls</li>
+                <li>budines</li>
+              </ul>
+          </ul>
+          </nav> 
     </header>
     <main>
-<!-- Carrousel con productos y breve descripción-->
+<!-- Banner con imagen de fondo y "slogan"-->
     
-        <div class= "banner">
-            <img  src="imagenes/choco_cookies2.png" class="d-block w-100" alt="ingredientes.">
-                <div class="carousel-caption d-none d-md-block">
+        <div id= "banner">
+            <!--<img  src="imagenes/choco_cookies2.png" alt="galletasconleche">-->
                     <h1>Lo mejor para los cookie lovers</h1>
                     <h3>Garantizada una experiencia de sabor inolvidable</h3>
                     <h4><strong>¡Probanos!</strong></h4>
-                </div>
         </div>
         
 
-<!--Parte del Store-->
+      <!--Parte del Store-->
+      <article id ="contenedor_Nosotros">
+          <section id="Nosotros">
+            <h1>Nosotros</h1>
+              <div>
+                <p>Somos un emprendimiento familiar apasiona@s por la repostería y sobre todo la hecha con amor.</p>
+                <p>Les acercamos lo mejor de nosotr@s para que disfruten meriendas únicas.</p>
+                <p>Los invitamos a pasar y deleitarse!</p>
+                <p>Un placer indulgente que los va a dejar con ganas de más!!</p>
+              </div>
 
-<section>
+            <h4>¿Cómo te llamás?</h4>
+              <form id="formulario_Cliente">
+                <label>Nombre:<input id ="cliente" type="text"/></label>
+                <input type="submit" value="Enviar"/>
+              </form>
+          </section>
+      </article>
+      <article id="Nuestras_Sabrosuras">
+        <h2>Llegaste!</h2>
+        <p> ahora a elegir que sabrosura degustar </p>
+          <section id="Store">
 
-</section>
+                  <div id="selector_Productos"> 
+                    <h3> Por favor indicanos qué querés ver, elegilo y agregalo al carrito</h3>
+                    <input type="text">
+                    <input type="text">
+                  </div>  
+
+                  <div id ="Productos">
+                    <div id="tarjetaProducto">
+                      <div>
+
+                      </div>
+                      <!--aca iran los productos filtrados-->
+                    </table>
+                  </div>
+            
+
+        <!--Para mostrar lo que se va cargando en el carrito-->
+
+          <aside>
+                  <div class="carrito">
+                    <table>
+                      <!--acá se mostrará lo cargado en el carrito-->
+                    </table>
+                  </div>
+            </aside>
+        </article>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
- </main>   
 </body>
 
+<footer>
+
+</footer>
 </html>

@@ -4,18 +4,20 @@
     box-sizing: border-box;
 }
 header {
+        display: flex;
         background-color: bisque;
                 img{ width: 8%;}
         }
 
 
 main{
-        display:block;
-        background-color: rgb(245, 196, 203);  
-        div{
-                .banner{
-                img{    width: 100%;
+        display:flex;
+        background-color: rgb(245, 196, 203); 
+        div{ 
+        #banner{
+                img{    background-image: url(imagenes/choco_cookies2.png);
+                        
                 }
-                }
+        }
         }
 }
