@@ -1,5 +1,3 @@
-//Creo el objeto producto con su constructor
-
 function Producto (id, tipoProd, categoria, sabor, precio) {
     this.id = parseInt(id);
     this.tipoProd = tipoProd.toLowerCase();
@@ -32,13 +30,25 @@ const producto19 = new Producto (19, "budines", "tradicional", "chocolate", 500)
 const producto20 = new Producto (20, "budines", "tradicional", "vainilla", 500);
 
 
-
-//Creo el array Productos
+//Creo el array Productos y lo guardo en el storage
 const productos = [producto1, producto2, producto3, producto4, producto5, producto6, producto7, producto8, producto9, producto10, producto11, producto12, producto13, producto14, producto15, producto16, producto17, producto18, producto19, producto20];
 
-//chequeo info presente en el array Productos
+const productosStorage =(clave, valor) => {localStorage.setItem(clave, valor)};
+productosStorage("listadoProductos", JSON.stringify(productos));
 
-console.log (productos.length);
-for (const Producto of productos) {
-    console.log(Producto.id, Producto.tipoProd, Producto.categoria, Producto.sabor, Producto.precio);
-}
+//Creo la tarjeta de producto para usarla en el html
+
+let ProductosHTML = $("#ProductosHTML");
+console.log(productos2.childNodes);
+
+
+const card = (texto) => `
+ <<div> ${texto.tipoProd}</div>
+    <div>${texto.sabor}</div>
+    <img scr="${texto.img}" alt="imagen del producto"></div>
+    <div>${texto.precio}</div>
+    </div>
+<br>
+`;
+
+//productos2[].innerHTML = productos.map(productos => card(productos2)).join ("");
