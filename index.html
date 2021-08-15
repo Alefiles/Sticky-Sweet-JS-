@@ -10,6 +10,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <script src="main.js"></script>
+    <script src="productos.js"></script>
+    <script src="carrito.js"></script>
     <!--<script src="productos.js"></script>-->
     
 
@@ -55,29 +57,26 @@
 
             <h4>¿Cómo te llamás?</h4>
               <form id="formulario_Cliente">
-                <label>Nombre:<input id ="cliente" type="text"/></label>
-                <input type="submit" value="Enviar"/>
+                <input id ="cliente" type="text"/>
+                <input id="enviaF" type="submit" value="Enviar"/>
               </form>
           </section>
       </article>
       <article id="Nuestras_Sabrosuras">
-        <h2>Llegaste!</h2>
+        <h2 id="Bienvenida">Llegaste!</h2>
         <p> ahora a elegir que sabrosura degustar </p>
           <section id="Store">
 
                   <div id="selector_Productos"> 
-                    <h3> Por favor indicanos qué querés ver, elegilo y agregalo al carrito</h3>
-                    <input type="text">
-                    <input type="text">
+                    <h3> Por favor indicanos qué querés ver, elegilo y luego agregalo al carrito</h3>
+                    <input id="selecTipo" type="text">
+                    <input id="selecCategoria" type="text">
                   </div>  
 
-                  <div id ="Productos">
+                  <div id ="ProductosHTML">
                     <div id="tarjetaProducto">
-                      <div>
-
-                      </div>
-                      <!--aca iran los productos filtrados-->
-                    </table>
+                      
+                    </div>
                   </div>
             
 
@@ -93,7 +92,6 @@
         </article>
     </main>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
 </body>
 
 <footer>
