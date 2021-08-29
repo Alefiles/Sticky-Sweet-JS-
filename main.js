@@ -1,73 +1,41 @@
-// Cambio estilo en el nav al apretar el botón
+$(document).ready(function (){
 
-/*let botonNav = document.getElementById("btnNav");
-botonNav.onmousedown = () => {
-style.backgroundColor = "lightblue";
-}*/
-//inicio el carrito
-let carrito = [];
+let nombre = document.getElementById("cliente");
+let bienvenida = document.getElementById("enviarF");
 
-const precioConIva = parseFloat((this.precio * 1.21).toFixed(1));
+localStorage.removeItem("cliente");
 
-$(document).ready(function(){
-//selecciono los elementos del DOM
-//
-const form = $("#formulario_Cliente");
-const inputCl = $("#Cliente");
-const enviarF = $("#enviaF");
-const Bienvenida = $("Bienvenida");
-const tipo = $("#selecTipo");
-const catego = $("#selecCategoria");
-
-<<<<<<< Updated upstream
-=======
-// Solicito info al cliente
-let cliente = document.getElementById("cliente");
-cliente.onkeyup = () => {console.log ("apreto tecla")};
-//let clienteJson =JSON.stringify(cliente);
-//localStorage.setItem("cliente", clienteJson);
-
-
-
-//function cargarCliente(e){
-//        e.preventDefault();
-//        console.log("cliente Enviado");
+//escucho el evento click del botón de envío
+    bienvenida.addEventListener("click", function(e){
+        e.preventDefault(); //previene el refresco automático de la página
+        //cargo en el local Storage lo que ingresa el usuario
         
-//}
-//}
-//else{
-//       console.log ("no se ingresó ningún nombre");
-//}
+        let clStorage = JSON.stringify(nombre.value);
+        localStorage.setItem("cliente",clStorage);
 
-
-//const clienteGen = prompt ("¿nos quisieras indicar tu género? Femenino, Masculino, No Binario, Otro, No gracias " )
+        
+        let tituloSaludo = document.getElementById("Bienvenida");
+        let usrStored = JSON.parse(localStorage.getItem("cliente")); //busca en el storage el nombre ingresado
+        
+            function saludar (){
+            tituloSaludo.innerHTML = `Bienvenid@ ${usrStored}, a disfrutar!`;
+            document.article.appendChild(tituloSaludo);
+            
+            };
+        
+        saludar();    
+        
+        $("#negocio").slideDown("slow");
         
 
+    });
+    
+$("h2").css({"color": "brown",
+            "textAlign": "center",});
 
-//Creo el objeto producto con su constructor
-
-function Producto (id, tipoProd, categoria, sabor, precio) {
-        this.id = parseInt(id);
-        this.tipoProd = tipoProd.toLowerCase();
-        this.categoria = categoria.toLowerCase();
-        this.sabor = sabor.toLowerCase();
-        this.precio = parseFloat(precio);
-        }
-
-// Creo los productos del store
->>>>>>> Stashed changes
-
-//Escucho el enviar del formulario
-form.submit(function(event){
-        event.preventDefault();
-// Solicito info al cliente
-const clienteJS = inputCl.val();
-
-const clienteJson = JSON.stringify(clienteJS);
-localStorage.setItem("cliente", clienteJson);
-
-
-//$("#Bienvenida").text("Llegaste "+clienteJson);
-$("#Bienvenida").text('Texto de sustitución');
-});
+$("#finPres").css({"textAlign": "center",
+                "color": "magenta",});
+$("#contactPic").css({
+    "will": "transform",
+    "transform": "perspective(300px) rotateX(0deg) rotateY(0deg)",});
 });

@@ -7,81 +7,68 @@
     <title>Stiky&Sweet - Galletas y Rolls </title>
     <meta name="description" content="Encontrá Galletas tradicionales, galletas gourmet y Rolls..si, de canela y más. Para mimarte y disfrutar sabores caseros al alcance de un click.">
     <meta name="keywords" content="cookies, cookies gourmet, rolls de canela, rolls de manzana, budines, budín, carrot cacke, marmolado, repostería casera, merienda, desayuno">
+    <link rel="icon" href="./imagenes/cookie-and-milk.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <script src="main.js"></script>
-<<<<<<< Updated upstream
-    <script src="productos.js"></script>
-    <script src="carrito.js"></script>
-=======
-    
->>>>>>> Stashed changes
     <!--<script src="productos.js"></script>-->
     
 
 </head>
 
 <body>
+    <div>
     <header id="contenedor_Nav">
+      <div>
+        <img id="navbar-brand"  src="imagenes/logoSS2.png" href="#" alt="logo">
+      </div>
+      <div>   
         <nav id="navbar">
-          <img id="navbar-brand"  src="imagenes/logoSS2.png" href="#" alt="logo">
-          <ul id ="btnNav">
-            <li href="contenedor_Nav">Inicio</li>
-            <li href="contenedor_Nosotros">Nosotros</li>
-            <li href="Nuestras_Sabrosuras">Nuestras Sabrosuras</li>
-              <ul>
-                <li>Cookies</li>
-                <li>Rolls</li>
-                <li>budines</li>
-              </ul>
-          </ul>
-          </nav> 
+            <a href="contenedor_Nav">Inicio</a> 
+            <a href="contenedor_Nosotros">Nosotros</a>
+            <a href="Nuestras_Sabrosuras">Nuestras Sabrosuras</a>
+            <a href="./contacto.html">Escribinos </a>
+        </nav> 
+      </div>
     </header>
+  </div>
     <main>
 <!-- Banner con imagen de fondo y "slogan"-->
     
-        <div id= "banner">
-            <!--<img  src="imagenes/choco_cookies2.png" alt="galletasconleche">-->
-                    <h1>Lo mejor para los cookie lovers</h1>
-                    <h3>Garantizada una experiencia de sabor inolvidable</h3>
-                    <h4><strong>¡Probanos!</strong></h4>
+        <div >
+                    
+                    <h1>Tu mejor opción para la merienda!</h1>
+                    <div id= "banner" >
+                    <img  id="imgBanner" src="./imagenes/choco_cookies2.png" alt="cookies"></div>
+                    <h3>Te garantizamos una experiencia de sabor casero inolvidable</h3>
+                    <h4><b>¡Probanos!</b></h4>
         </div>
         
 
       <!--Parte del Store-->
-      <article id ="contenedor_Nosotros">
-          <section id="Nosotros">
-            <h1>Nosotros</h1>
-              <div>
-                <p>Somos un emprendimiento familiar apasiona@s por la repostería y sobre todo la hecha con amor.</p>
+          <div id="ingreso">
+            <h2>Nosotros</h2>
+              <div id="Nosotros">
+                <p>Somos un emprendimiento familiar apasionad@s por la repostería y sobre todo la hecha con amor.</p>
                 <p>Les acercamos lo mejor de nosotr@s para que disfruten meriendas únicas.</p>
-                <p>Los invitamos a pasar y deleitarse!</p>
                 <p>Un placer indulgente que los va a dejar con ganas de más!!</p>
+                <p id="finPres"> <b>Los invitamos a pasar y deleitarse!</b></p>
+                
               </div>
-
+            </div>
+          <div >
             <h4>¿Cómo te llamás?</h4>
-              <form id="formulario_Cliente">
+              <div id="entradaCliente">
+                <label>Tu nombre</label>
                 <input id ="cliente" type="text"/>
-                <input id="enviaF" type="submit" value="Enviar"/>
-              </form>
-          </section>
-      </article>
-      <article id="Nuestras_Sabrosuras">
-        <h2 id="Bienvenida">Llegaste!</h2>
-        <p> ahora a elegir que sabrosura degustar </p>
-          <section id="Store">
-
-                  <div id="selector_Productos"> 
-                    <h3> Por favor indicanos qué querés ver, elegilo y luego agregalo al carrito</h3>
-                    <input id="selecTipo" type="text">
-                    <input id="selecCategoria" type="text">
-                  </div>  
-
-                  <div id ="ProductosHTML">
-                    <div id="tarjetaProducto">
-                      
-                    </div>
-                  </div>
+                <button id="enviarF">Enviar</button>
+              </div>
+                
+          <h2 id="Bienvenida"></h2>
+          </div>
+          <div id="store">
+              
+    
+          </div>
             
 
         <!--Para mostrar lo que se va cargando en el carrito-->
@@ -96,6 +83,9 @@
         </article>
     </main>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="main.js"></script>
+    <script src="productos.js"></script>
+    <script src="carrito.js"></script>
 </body>
 
 <footer>

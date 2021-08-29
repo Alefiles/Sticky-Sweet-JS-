@@ -17,13 +17,14 @@ header img {
 }
 
 main {
+  margin: 1%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background-color: #f5c4cb;
 }
 
-main div #banner img {
-  background-image: url(imagenes/choco_cookies2.png);
+main div {
+  background-image: url(./imagenes/choco_cookies2.png);
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,7 +1,7 @@
 *{
-    padding:0;
-    margin:0;
-    box-sizing: border-box;
+padding:0;
+margin:0;
+box-sizing: border-box;
 }
 header {
         display: flex;
@@ -11,13 +11,10 @@ header {
 
 
 main{
+        margin: 1%;
         display:flex;
         background-color: rgb(245, 196, 203); 
-        div{ 
-        #banner{
-                img{    background-image: url(imagenes/choco_cookies2.png);
-                        
+        div {
+                background-image: url(./imagenes/choco_cookies2.png);
                 }
         }
-        }
-}

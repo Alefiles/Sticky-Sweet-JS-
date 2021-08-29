@@ -1,3 +1,4 @@
+$(document).ready(function(){
 function Producto (id, tipoProd, categoria, sabor, precio) {
     this.id = parseInt(id);
     this.tipoProd = tipoProd.toLowerCase();
@@ -36,19 +37,44 @@ const productos = [producto1, producto2, producto3, producto4, producto5, produc
 const productosStorage =(clave, valor) => {localStorage.setItem(clave, valor)};
 productosStorage("listadoProductos", JSON.stringify(productos));
 
+
+$("#nuestrasSabrosuras").append(`<h2><b>Nuestras Sabrosuras</b></h2>`)
+//Agrego los inputs que serviran de filtro
+
+$("#store").append(` <section id="negocio">
+                            <h3> Por favor indicanos qué querés pedir y agregalo al carrito</h3>
+                        <div id="selectorProductos"> 
+                            <label> ¿Qué te gustaría comer?</label>
+                            <input id="selecTipo" type="text">
+                                <br>
+                            <label> ¿Qué sabor?</label>
+                            <input id="selecCategoria" type="text">
+                                <br>
+                            <select id="tipo" text="¿Qué te gustaría comer?">
+                                <option value="1" selected> Galletas </option>
+                                <option value="2"> Rolls </option>
+                                <option value="3"> Budines </option>
+                            </select>
+                        </div>  
+
+                        <div id ="ProductosHTML"> </div>
+                        <div id="tarjetaProducto"></div>
+                    </section>`);
+
 //Creo la tarjeta de producto para usarla en el html
-
-let ProductosHTML = $("#ProductosHTML");
-console.log(productos2.childNodes);
-
-
-const card = (texto) => `
- <<div> ${texto.tipoProd}</div>
-    <div>${texto.sabor}</div>
-    <img scr="${texto.img}" alt="imagen del producto"></div>
-    <div>${texto.precio}</div>
-    </div>
-<br>
-`;
-
-//productos2[].innerHTML = productos.map(productos => card(productos2)).join ("");
+let tipoSelec = $("#tipo");
+const tipo = JSON.stringify(tipoSelec.value);
+//let ProductosHTML = $("#ProductosHTML");
+//console.log(productos.childNodes);
+let productosHTML = $("#tarjetaProducto");
+//hacer el for of y que recorra el array productos y por cada producto cree la tarjeta
+// <div>
+ /*     <Img>
+        <sabor>h4
+            precio
+            input cantidad  .value
+            botón agregar al carro
+        
+productosHTML.appendChild (productos.map(producto =>`<ul><li>$//{producto.sabor}</li>).join(""));</ul>)`));
+*/
+});
